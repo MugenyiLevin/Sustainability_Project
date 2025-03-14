@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sustainability Project</title>
+    <style>
+        /* CSS Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #e0f7fa, #c8e6c9);
+            color: #333;
+        }
+
+        nav {
+            background-color: #4caf50;
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 15px;
+            border-radius: 25px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #388e3c;
+        }
+
+        .content {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .content h1 {
+            font-size: 3em;
+            color: #2e7d32;
+            margin-bottom: 10px;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+
+        .content p {
+            font-size: 1.2em;
+            color: #555;
+            line-height: 1.6;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1s ease 0.3s, transform 1s ease 0.3s;
+        }
+
+        .section {
+            padding: 30px;
+            margin: 30px auto;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+            max-width: 800px;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .section h2 {
+            color: #2e7d32;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e8f5e9;
+            padding-bottom: 10px;
+        }
+
+        .section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .section ul li {
+            margin-bottom: 15px;
+        }
+
+        .section ul li a {
+            color: #00796b;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            display: inline-block;
+            padding: 10px 15px;
+            border-radius: 20px;
+        }
+
+        .section ul li a:hover {
+            color: #004d40;
+            background-color: #e8f5e9;
+            color:#2e7d32;
+        }
+
+        footer {
+            background-color: #4caf50;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        .info-popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            max-width: 700px;
+            text-align: center;
+        }
+
+        .info-popup button {
+            margin-top: 20px;
+            padding: 12px 20px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .info-popup button:hover {
+            background-color: #388e3c;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#" data-info="Our homepage showcasing our mission and initiatives.">Home</a></li>
+            <li><a href="#" data-info="Detailed objectives we aim to achieve for sustainability.">Objectives</a></li>
+            <li><a href="#" data-info="Latest articles and research on sustainability topics.">Articles</a></li>
+            <li><a href="#" data-info="Explore our community initiatives and how to get involved.">Initiatives</a></li>
+            <li><a href="#" data-info="Contact information and ways to reach us for inquiries.">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <h1>Embrace Sustainable Living</h1>
+        <p>Join us in our mission to create a greener, more sustainable future through education and action at Gombe Secondary School.</p>
+    </div>
+
+    <div class="section" id="objectivesSection">
+        <h2>Objectives</h2>
+        <ul>
+            <li><a href="#" data-info="Educate about the importance of reducing waste and recycling effectively.">Raise awareness about environmental sustainability.</a></li>
+            <li><a href="#" data-info="Promote strategies for efficient waste sorting and recycling programs.">Encourage responsible waste management and recycling.</a></li>
+            <li><a href="#" data-info="Provide information about solar, wind, and other renewable energy options.">Educate communities on alternative sustainable energy sources.</a></li>
+            <li><a href="#" data-info="Support and participate in local tree planting and ecosystem restoration projects.">Support environmental conservation through local initiatives.</a></li>
+        </ul>
+    </div>
+
+    <div class="section" id="articlesSection">
+        <h2>Latest Articles</h2>
+        <p>Stay informed with the latest insights and developments in sustainability.</p>
+        <ul>
+            <li><a href="#" data-info="Learn about the benefits of recycling and how it reduces environmental impact.">The Importance of Recycling</a></li>
+            <li><a href="#" data-info="Practical steps to reduce your personal carbon emissions.">How to Reduce Your Carbon Footprint</a></li>
+            <li><a href="#" data-info="Tips for incorporating sustainable practices into everyday life.">Sustainable Living: Tips and Tricks</a></li>
+        </ul>
+    </div>
+
+    <div class="section" id="initiativesSection">
+        <h2>Community Initiatives</h2>
+        <p>Get involved and make a difference with our community-driven programs.</p>
+        <ul>
+            <li><a href="#" data-info="Participate in our program to plant trees and restore local ecosystems.">Tree Planting Program</a></li>
+            <li><a href="#" data-info="Join community efforts to clean up beaches and urban areas.">Beach and City Clean-ups</a></li>
+            <li><a href="#" data-info="Attend workshops to learn about sustainable practices and environmental issues.">Educational Workshops</a></li>
+        </ul>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Sustainability Project | Contact us at sustainability@example.com</p>
+    </footer>
+
+    <div id="infoPopup" class="info-popup">
+        <p id="popupContent"></p>
+        <button id="closePopup">Close</button>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const heading = document.querySelector('.content h1');
+            const paragraph = document.querySelector('.content p');
+            const objectivesSection = document.getElementById('objectivesSection');
+            const articlesSection = document.getElementById('articlesSection');
+            const initiativesSection = document.getElementById('initiativesSection');
+            const links = document.querySelectorAll('a[data-info]');
+            const infoPopup = document.getElementById('infoPopup');
+            const popupContent = document.getElementById('popupContent');
+            const closePopup = document.getElementById('closePopup');
+
+            setTimeout(() => {
+                heading.style.opacity = 1;
+                heading.style.transform = 'translateY(0)';
+            }, 100);
+
+            setTimeout(() => {
+                paragraph.style.opacity = 1;
+                paragraph.style.transform = 'translateY(0)';
+            }, 400);
+
+            setTimeout(() => {
+                objectivesSection.style.opacity = 1;
+                objectivesSection.style.transform = 'translateY(0)';
+            }, 700);
+
+            setTimeout(() => {
+                articlesSection.style.opacity = 1;
+                articlesSection.style.transform = 'translateY(0)';
+            }, 1000);
+
+            setTimeout(() => {
+                initiativesSection.style.opacity = 1;
+                initiativesSection.style.transform = 'translateY(0)';
+            }, 1300);
+
+            links.forEach(link => {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    popupContent.textContent = this.getAttribute('data-info');
+                    infoPopup.style.display = 'block';
+                });
+            });
+
+            closePopup.addEventListener('click', function() {
+                infoPopup.style.display = 'none';
+            });
+        });
+    </script>
+
+</body>
+</html>
