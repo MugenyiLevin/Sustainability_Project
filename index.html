@@ -18,12 +18,14 @@
             background-color: #4caf50;
             padding: 15px 0;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            display: flex; /* Use flexbox to align logo and links */
+            align-items: center; /* Vertically align items in the nav */
+            justify-content: space-between; /* Space out logo and links */
         }
 
         nav ul {
             list-style: none;
             display: flex;
-            justify-content: center;
             padding: 0;
             margin: 0;
         }
@@ -43,6 +45,21 @@
 
         nav ul li a:hover {
             background-color: #388e3c;
+        }
+        .nav-logo {
+            margin-left: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .nav-logo img {
+            height: 100px; /* Adjust logo size as needed */
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+        .nav-logo span {
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
         }
 
         .content {
@@ -154,6 +171,10 @@
 <body>
 
     <nav>
+        <div class="nav-logo">
+            <img src="gombelogo.jpg" alt="Sustainability Logo">
+            <span>Gombe Secondary School</span>
+        </div>
         <ul>
             <li><a href="#" data-info="Our homepage showcasing our mission and initiatives.">Home</a></li>
             <li><a href="#" data-info="Detailed objectives we aim to achieve for sustainability.">Objectives</a></li>
@@ -165,7 +186,7 @@
 
     <div class="content">
         <h1>Embrace Sustainable Living</h1>
-        <p>Join us in our mission to create a greener, more sustainable future through education and action at Gombe Secondary School.</p>
+        <p>Join us in our mission to create a greener, more sustainable future through education and action.</p>
     </div>
 
     <div class="section" id="objectivesSection">
@@ -199,7 +220,8 @@
     </div>
 
     <footer>
-        <p>&copy; 2025 Sustainability Project | Contact us at sustainability@example.com</p>
+        <p>&copy; 2025 Sustainability Project
+        | BY: MWESIGWA LEITON</p>
     </footer>
 
     <div id="infoPopup" class="info-popup">
